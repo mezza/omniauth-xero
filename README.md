@@ -2,6 +2,8 @@
 
 [Omniauth Xero](https://github.com/kaleworsley/omniauth-xero) is an [OmniAuth](https://github.com/intridea/omniauth) authentication strategy for [Xero](http://www.xero.com).
 
+This fork simplifies the OmniAuth strategy, since Xero only supports OAuth not OAuth2, and doesn't supply any user info in the return tokens. As a result, if there is more than one user in the organisation, you get an array of users, and selecting the first one is incorrect, since it doesn't correspond to the user who's logging in.
+
 ## Installation
 
 Add this to your application's Gemfile:
